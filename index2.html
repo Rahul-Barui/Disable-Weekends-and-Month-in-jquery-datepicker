@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> jQuery Bootstrap Date-Picker Test </title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="day/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="day/css/datepicker.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <h3 style="text-align: center; color: #8A1B03;">jQuery Bootstrap Date-Picker</h3>
+            <h4 style="text-align: center; color: #060464;">Disable a particuler Day </h4>
+            <br>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="date">Date : </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="datepicker" placeholder=" Choose a Date ">
+                    </div>
+                </div>
+            </form>
+
+            <br>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Github : https://github.com/Rahul-Barui </b></h5>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Linked In : https://in.linkedin.com/in/rahul-barui-555651177 </b></h5>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Stackoverflow : https://stackoverflow.com/users/10754963/rahul-barui </b></h5>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Google : RAHUL BARUI </b></h5>
+
+        </div>
+
+        <div id="info"></div>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="day/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    <script src="day/bootstrap/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script>
+        //__________Specific Lenth of Month_____________ 
+        $('#datepicker').datepicker({
+            daysOfWeekDisabled: [0,1,2] //daysOfWeekDisabled: [1,2,3,4]
+        });
+    </script>
+</html>

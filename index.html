@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> jQuery Bootstrap Date-Picker Test </title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="day/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!--<link href="day/css/datepicker.css" rel="stylesheet" type="text/css" />-->
+
+        <link href="month/jquery-ui.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <h3 style="text-align: center; color: #8A1B03;">jQuery Bootstrap Date-Picker</h3>
+            <h4 style="text-align: center; color: #060464;">Disable a particuler Month </h4>
+            <br>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="date">Date : </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="datepicker2" placeholder=" Choose a Date ">
+                    </div>
+                </div>
+            </form>
+
+            <br>
+            <h6 style="text-align: center; color: #060464;">Disable a particuler Day ( Show on <a href="index2.html" target="_blank"><b>INDEX2.HTML</b></a> ) </h6>
+
+
+            <br>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Github : https://github.com/Rahul-Barui </b></h5>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Linked In : https://in.linkedin.com/in/rahul-barui-555651177 </b></h5>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Stackoverflow : https://stackoverflow.com/users/10754963/rahul-barui </b></h5>
+            <h5 style="text-align: center; color: #5F1403;"> <b>Google : RAHUL BARUI </b></h5>
+
+        </div>
+
+        <div id="info"></div>
+    </body>
+
+    <script src="month/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="month/jquery-ui.js" type="text/javascript"></script>
+
+    <script>
+
+        //__________Specific Lenth of Month_____________ 
+
+        //var firstOfThisMonth=new Date();
+        //firstOfThisMonth.setDate(1)
+
+        $('#datepicker2').datepicker({
+            daysOfWeekDisabled: [1,2,3,4],
+            changeMonth: true,   
+            //changeYear:true, 
+            //minDate: firstOfThisMonth,
+            minDate: new Date('2019/11/02'),
+            maxDate: new Date('2020/04/02'),
+            //daysOfWeekDisabled: [1,2,3,4],
+
+           // beforeShowDay: $.datepicker.noWeekends
+           beforeShowDay: function(date){ return [date.getDay() == 0 || date.getDay() == 5 || date.getDay() == 6,""]}
+        });
+    </script>
+</html>
